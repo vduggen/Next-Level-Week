@@ -1,0 +1,35 @@
+Sempre devemos converter o id vindo do parâmetro para Number.
+
+Sempre precisamos definir qual tipo do body iremos utilizar.
+Ex: app.use(express.json());
+
+Geralmente pegamos alguma coisa da requisição desta forma:
+req.params.id
+
+Primeiro: é o nome do parametro passado na função.
+Segundo: é de onde quer pegar ali por exemplo pegamos dos parametros da rota, mais poderiamos pegar no body da requisição.
+Terceiro: é o nome do parametro vindo da rota(Importante ser o mesmo definido na criação da rota).
+
+Sempre retornamos response.json(variavel_com_os_valores_para_mostrar)
+
+Definições HTTP:
+	Rota: Endereço completo da requisição
+	Recurso: Qual entidade estamos acessando do sistema
+
+Métodos HTTP:
+	GET: Buscar uma ou mais informações do back-end
+	POST: Criar uma nova informação no back-end
+	PUT: Atualizar uma informação existente no back-end
+	DELETE: Remover uma informação do back-end
+
+Tipos de parâmetros:
+	Request Param: Parâmetros que vem na própria rota que identificam um recurso.
+	Query Param: Parâmetros que vem na própria rota geralmente opcionais para filtros, paginação.
+	Request Body: Parâmetros para criação/atualização de informações.
+
+Configurando banco de dados:
+	sempre utilizar o path do node, para padronizar o caminho do arquivo.
+	__dirname: me localiza pro arquivo que está aberto.
+	Ex: path.resolve(__dirname,nome_arquivo)
+
+	migrations: são o histórico do bd
